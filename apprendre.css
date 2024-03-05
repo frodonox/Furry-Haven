@@ -1,0 +1,552 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+html,body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+.hero{
+    height: 100vh;
+    background: linear-gradient(rgb(0,0,0,0.3),transparent),url("images/team7-transformed.jpeg");
+    background-position:center ;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+
+/* navigator */
+
+header {
+    position: relative;
+}
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 80px;
+    height: 0;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2.8px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: 335px;
+    white-space: nowrap;
+}
+
+.dropdown_menu .list{
+    display: block;
+    margin-left: 100px;
+}
+.dropdown_menu .list li{
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9px;
+
+}
+.dropdown_menu .list .btn{
+
+    position: relative;
+    top: -33px;
+    margin-left: 260px
+    
+    
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    /* sticky */
+    transition: 0.6s;
+    position: fixed;
+    z-index: 10000;
+    white-space: nowrap;
+}
+
+nav .list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 120px;
+    padding-top: 5.7px;
+}
+nav .toggle_btn{
+    color: #F4f3f2;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    margin-right: 11px;
+    margin-top: 9px;
+}
+nav ul li {
+    position: relative;
+    left: -16px;
+    list-style-type: none;
+    padding: 10px 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    transition: transform 0.4s;
+    margin-top: 20px;
+}
+nav ul li:hover{
+    transform: scale(1.2);
+}
+nav ul li a{
+    color: #F4f3f2;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+nav ul li a:hover{
+    color:#C9CA68;
+}
+/* logo */
+nav .logo{
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: 0.6s;
+    padding: 15px 0px 0px 104px;
+    font-weight: bold;
+}
+
+/* contact us button */
+nav .btn{
+    position: relative;
+    left: -130px;
+    top: -7.8px;
+    background-color: #AAAC4C;
+    color: #F4f3f2;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin-top: 25px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: sticky 0.6;
+    transition: transform 0.4s;
+} 
+nav .btn:hover{
+    transform: scale(1.2);
+    background-color: #AAAC4C;
+    color: #F4f3f2;
+}
+
+@media (max-width:1115px) {
+    nav .list,nav .btn{
+        display: none;
+    }
+    nav .toggle_btn{
+        display: block;
+    }
+    nav .dropdown_menu .btn{
+        display: block;
+    }
+    nav .dropdown_menu{
+        display: block;
+    }
+    nav.sticky .logo{
+        position: relative;
+        bottom: -100px;
+    }
+}
+
+@media (max-width:576) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+/* sticky navbar */
+nav.sticky{
+
+    background-color: #AAAC4C;
+    white-space: nowrap;
+    height: 75px;
+}
+nav.sticky .logo , nav.sticky ul li a{
+    color: #fff;
+}
+nav.sticky ul {
+    position: relative;
+    top: -11px;
+    margin-left: 5px;
+}
+nav.sticky ul li a:hover{
+    color: #98865b;
+}
+nav.sticky .btn{
+    position: relative;
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 19px;
+    top: -17px;
+}
+nav.sticky .btn p{
+    position: relative;
+    bottom: -1px;
+}
+nav.sticky .logo{
+    position: relative;
+    top: -10px;
+
+}
+
+nav.sticky .toggle_btn{
+    position: relative;
+    top: -8px;
+
+}
+.content{
+    position: absolute;
+    top: 55%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+@media (max-width:438px){
+    nav .logo{
+        position: relative;
+        left: -80px;
+    }
+}
+/* ___________________introduction___________________ */
+.main-section{
+    padding-top: 180px;
+}
+.main-section h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color:#fff;
+}
+.main-section p{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 45px;
+    margin-left: 40px;
+    color: #fff;
+}
+.main-section span:not(span.first){
+    color: #AAAC4C; 
+}
+.main-section span.first{
+    margin-left: 46px;
+}
+/* --------------------------main section------------------------ */
+/* cards */
+.row{
+    margin: 50px 0px;
+}
+
+/* heading */
+#one{
+    display: flex;
+    flex-direction: row;
+}
+
+.container h1{
+    margin: 20px 0;
+}
+section{
+    background: #F2F2F4;
+}
+
+.mission{
+    position: relative;
+    bottom: -10px;
+}
+.story{
+    position: relative;
+    top: -30px;
+}
+/* images */
+.container .row img{
+    border-radius: 15px;
+}
+.container .row .second-img{
+    height: 490px;
+    width: 520px;
+}
+.container .row .first-img{
+    height: 490px;
+    width: 520px;
+}
+.container .row .first-img{
+    height: 400px;
+    position: relative;
+    top: -45px;
+}
+.container .row p , .container .row h1{
+    color: #213334;
+}
+/* paragraphes */
+.container .row div p{
+    text-align:start;
+}
+@media (max-width:770px){
+    #one{
+        flex-direction: column-reverse;
+    }
+}
+/* --------------timeline---------------- */
+.title {
+    color: black;
+    font-weight: 700;
+    margin-top: 85px;
+    margin-bottom: 115px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 23px;
+}
+.title span{
+    color: #AAAC4C;
+}
+.process-wrapper{
+    margin: auto;
+    max-width: 1080px;
+}
+/* timeline circles */
+#progress-bar-container{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#progress-bar-container ul{
+    padding: 0;
+    margin: 0;
+    padding-top: 15px;
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+}
+/* timeline structure */
+#progress-bar-container li::before{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid 2px #aaa;
+    transition: all ease 0.3s;
+}
+#progress-bar-container li.active::before,#progress-bar-container li:hover:before{
+    background: #AAAC4C;
+}
+/* timeline list */
+#progress-bar-container li{
+    list-style: none;
+    float: left;
+    width: 20%;
+    text-align: center;
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all ease 0.2s;
+    vertical-align: bottom;
+    height: 59px;
+    position: relative;
+}
+/* dates in words */
+#progress-bar-container li .step-inner{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+}
+/* sub circle */
+#progress-bar-container li:after{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: #777;
+    margin: auto;
+    border: solid 7px grey ;
+    border-radius: 50%;
+    margin-top: 46px;
+    box-shadow: 0 2px 13px -1px rgba(0, 0, 0, 0.3);
+    transition: all ease 0.2s;
+}
+#progress-bar-container li:hover:after{
+    background: #AAAC4C;
+}
+#progress-bar-container li.active:after{
+    background: #AAAC4C;
+}
+/* line creation */
+#progress-bar-container #line{
+    width: 80%;
+    margin: auto;
+    background: #eee;
+    height: 5px;
+    position: absolute;
+    left: 10%;
+    top: 57px;
+    z-index: 1;
+    border-radius: 50px;
+    transition: all ease 0.9s;
+}
+#progress-bar-container #line-process{
+    content: "";
+    width: 3%;
+    height: 100%;
+    background: #AAAC4C;
+    background: linear-gradient(to right,#AAAC4C 0%,#2ea3 100%);
+    position: absolute;
+    z-index: 2;
+    border-radius: 50px;
+    transition: all ease 0.9s;
+}
+#progress-content-section{
+    width: 90%;
+    margin: auto;
+    background: #f3f3f3;
+    border-radius: 4px;
+}
+/* -------------our history settings------------ */
+/* history body */
+#progress-content-section .section-content{
+    padding: 30px 40px;
+    text-align: center;
+}
+/* our history heading */
+#progress-content-section .section-content h2 {
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #333;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+/* our history paragraphes */
+#progress-content-section .section-content p {
+    font-size: 16px;
+    line-height: 1.8em;
+    color: #777;
+}
+#progress-content-section .section-content {
+    display: none;
+    animation: FadeInUp 700ms ease 1;
+    animation-fill-mode: forwards;
+    transform: translateY(15px);
+    opacity: 0;
+}
+#progress-content-section .section-content.active {
+    display: inline;
+}
+@keyframes FadeInUp {
+    0%{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.process-wrapper{
+    margin-bottom: 100px;
+}
+
+/* --------footer---------- */
+/***************footer********************/
+/* main container */
+.box{
+
+    background-color: #191919;
+    color: #F4f3f2;
+    font-family: Nunito,sans-serif;
+
+}
+
+/* sub container */
+.contain{
+    padding: 79px 50px;
+}
+.contain .col{
+    transform: translateY(20px);
+}
+
+/* header */
+.contain h1{
+    width: fit-content;
+    margin: 0px auto 15px;
+}
+.contain h1 span{
+    color: #AAAC4C;
+}
+
+/* paragraphe */
+.contain p{
+    font-size: 17px;
+    color: #f4f3f2ea;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 25px;
+}
+
+
+/* social media */
+.sociaux{
+    font-size: 27px;
+    letter-spacing: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sociaux a{
+    width: 45px;
+    height: 45px;
+    color: white;
+    background-color: #AAAC4C;
+    border-radius: 50%;
+    margin: 22px 10px;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+.sociaux a:hover{
+    transform: scale(1.2);
+}
+.sociaux a i {
+    padding: 9px 11px;
+}
+.sociaux a:nth-child(2) i{
+    font-size: 26px;
+    padding: 10px 9.5px;
+}
+/* scroll bar */
+::-webkit-scrollbar{
+    width: 13px;
+}
+::-webkit-scrollbar-track{
+    background: #d1e5ff;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#B4AE57,#e3b970);
+    border-radius: 10px;
+}

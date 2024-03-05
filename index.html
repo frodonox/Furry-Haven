@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Refuge à fourrure</title>
+</head>
+<body>
+    <!-- Hero section -->
+    <div id="Acceuil" class="hero">
+        <header>
+            <nav class="navbar">
+                <h2 class="logo">Refuge à Fourrure</h2>
+                <ul class="list">
+                    <li><a class="active" href="#Acceuil">ACCUEIL</a></li>
+                    <li><a href="#about">À PROPOS</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#booking">RÉSERVER</a></li>
+                    <li><a href="#team">EQUIPE</a></li>
+                </ul>
+                <a href="#" class="btn">Donation</a> 
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- dropdown menu -->
+                <div class="dropdown_menu">
+                    <ul class="list">
+                        <li><a class="active" href="#Acceuil">ACCUEIL</a></li>
+                        <li><a href="#about">À PROPOS</a></li>
+                        <li><a href="#services">SERVICES</a></li>
+                        <li><a href="#booking">RÉSERVER</a></li>
+                        <li><a href="#team">EQUIPE</a></li>
+                        <li><a href="#" class="btn">Donation</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <script type="text/javascript">
+            window.addEventListener("scroll",function(){
+                var nav = document.querySelector("nav");
+                nav.classList.toggle("sticky", window.scrollY > 0)
+            })
+
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+            
+            toggleBtn.onclick = function() {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }
+        </script>
+        <div class="content">
+            <h1>L'Odyssée de l'Amour</h1>
+            <h2>À quatre Pattes</h2>
+            <P> Changer des vies une patte à la fois, adoptez aujourd'hui!</P>
+            <div class="news-letter">
+                <form action="">
+                    <input type="email" name="em" id="em" placeholder="Entrer votre email">
+                    <input type="submit" name="sub" value="Soumettre">
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <!-- End of Hero section -->
+
+    <!-- about us begin -->
+    <section id="about" class="about">
+        <div class="main">
+            <div class="image-container">
+                <div class="slider">
+                <img src="images/staff3.jpg" alt="image d'un centre d'adoption d'animaux de compagnie" >
+                <img src="images/vetinary1-transformed.jpeg" alt="image d'un centre d'adoption d'animaux de compagnie">
+                <img src="images/staff7-transformed.jpeg" alt="image d'un centre d'adoption d'animaux de compagnie">
+                <img src="images/vetinary3-transformed.jpeg" alt="lady with a dog">
+                <img src="images/dog_food-transformed.jpeg" alt="lady with a dog inside">
+                <img src="images/staff_6-transformed.jpeg" alt="">
+                <img src="images/staff7-transformed.jpeg" alt="">
+                </div>
+            </div>
+            
+            <div class="about-text">
+                <h1>A propos de nous</h1>
+                <h2>Chaleur et Bonheur à Quatre Pattes</h2>
+                <p>
+                    Bienvenue au Refuge à Fourrure, un havre de tendresse dédié à la magie des adoptions.
+                    Chez nous, chaque patte raconte une histoire unique, chaque regard évoque un amour inconditionnel.
+                    Notre refuge est bien plus qu'un lieu d'adoption, c'est un sanctuaire où les cœurs se rencontrent,
+                    où des liens indéfectibles se tissent entre humains et animaux. Rejoignez-nous pour vivre l'aventure 
+                    douce et chaleureuse de l'adoption, et découvrez le bonheur infini qui naît de chaque étreinte à fourrure.
+                    Bienvenue chez vous, bienvenue au Refuge à Fourrure, où chaque adoption transforme des vies, une patte à la fois!
+                </p>
+                <button type="button"><a href="more.html">Plus d'informations</a></button>
+            </div>
+        </div>
+    </section>
+    <!-- end of about us section -->
+
+
+    <!-- begin booking and services section -->
+    <section id="booking" class="booking-promo-services">
+        <!-- booking -->
+        <div class="booking">
+            <form action="#">
+                <div class="field">
+                    <input type="text" placeholder="Votre Nom">
+                </div>
+                <div class="field">
+                    <input type="email" placeholder="Votre Email">
+                </div>
+                <div class="field">
+                    <input type="date" placeholder="Date de Reservation">
+                </div>
+                <div class="field">
+                    <input type="time" placeholder="Temps de Reservation">
+                </div>
+                <div class="field">
+                    <select name="select" id="#">
+                        <option value="">--Veuillez choisir une option--</option>
+                        <option value="1">Adoption d'animaux</option>
+                        <option value="2">Pension d'Animaux</option>
+                        <option value="3">Alimentation d'animaux</option>
+                        <option value="4">Toilettage d'animaux</option>
+                        <option value="5">Dressage d'animaux</option>
+                    </select>
+                </div>
+                <button class="sub">Soumettre</button>
+                
+            </form>
+        </div>
+        <!-- promotional services -->
+        <div class="promo-services">
+            <h4>Tu Pars En Vacances?</h4>
+            <h1>Reserver Pour Votre <span>Animal</span></h1>
+            <p class="nos-services">Voici un de notre services disponible :</p>
+            <div class="row">
+                <div class="service">
+                    <div class="ico">
+                        <img src="icons/board.png" alt="man holding a dog">
+                        <h5>Pension d'Animaux</h5>
+                    </div>
+                    <p>Confort assuré, amour inclus, pendant votre absence.</p>
+                </div>
+                <div class="service">
+                    <div class="ico">
+                        <img src="icons/pet-food_6356472.png" alt="dog eating food">
+                        <h5>Alimentation d'animaux</h5>
+                    </div>
+                    <p> Nutrition de qualité pour une vie saine et joyeuse.</p>
+                </div>
+                <div class="service">
+                    <div class="ico">
+                        <img src="icons/hairbrush_10548344.png" alt="man talking to dog">
+                        <h5>Toilettage d'animaux </h5>
+                    </div>
+                    <p> Éclat et bien-être en quelques coups de brosse.</p>
+                </div>
+                <div class="service">
+                    <div class="ico">
+                        <img src="icons/dog-training-whistle_10377669.png" alt="man cagging a dog and">
+                        <h5>Dressage d'animaux</h5>
+                    </div>
+                    <p> Obéissance joyeuse et complicité assurée.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- services -->
+    <section class="services">
+        <div id="services" class="our-services">
+            <h1>Nos <span>services</span></h1>
+            <div class="rank">
+                <div class="service">
+                    <img src="icons/rename.png" alt="man holding a dog">
+                    <div class="con">
+                        <h2>Adoption responsable</h2>
+                        <p>Conseils et accompagnement pour des adoptions éclairées et responsables.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <img src="icons/pet talk.png" alt="man talking to dog">
+                    <div class="con">
+                        <h2>Éducation d'animals </h2>
+                        <p> Cours d'éducation pour les nouveaux propriétaires d'animaux de compagnie.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <img src="icons/dog cagged.png" alt="man cagging a dog and">
+                    <div class="con">
+                        <h2>Garde Temporaire</h2>
+                        <p>un service de garde temporaire pour les adoptants qui ont besoin d'aide pendant des périodes particulières,comme des vacances ou des urgences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- our team -->
+    
+    <section class="our-team">
+        <h1>Notre <span>Equipe</span></h1>
+        <div id="team" class="team">
+            <div class="cardz">
+                <div class="circle">
+                    <div class="image-box">
+                        <img src="images/rachel.jpg" alt="man">
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Jihane</h3>
+                    <div class="text-icon">
+                        <h4>Éducateur</h4>
+                        <a href="#">
+                            <i class="fa-solid fa-right-long"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cardz">
+                <div class="circle">
+                    <div class="image-box">
+                        <img src="images/max.jpg" alt="man">
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Rachid</h3>
+                    <div class="text-icon">
+                        <h4>Coordinateur</h4>
+                        <a href="#">
+                            <i id="one" class="fa-solid fa-right-long"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cardz">
+                <div class="circle">
+                    <div class="image-box">
+                        <img src="images/kelly.jpg" alt="man">
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Sofia</h3>
+                    <div class="text-icon">
+                        <h4>Soigneur Animalier</h4>
+                        <a href="#">
+                            <i class="fa-solid fa-right-long"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of our team -->
+    
+    <!-- start of footer -->
+    <footer>
+        <div class="box">
+            <div class="contain">
+                <div class="col">
+                    <h1>Refuge à <span>Fourrure</span></h1>
+                    <p> Changer deux vies pour le meilleur la vôtre et celle de votre nouvel ami poilu <br>
+                        en découvrant la richesse infinie de l'amour inconditionnel.</p>
+                    <div class="sociaux">
+                        <a href="https://wa.me/0679355498" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/HumaneSocietyMorocco/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/spadumaroc/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+        
+</body>
+</html>
